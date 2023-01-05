@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration</title>
+    <script src="Validation.js"></script>
+    <style>
+    input{
+        border:1px solid black;
+        height:20px;
+
+    }
+        .row{
+            margin-left: 150px;
+            width:1000px;
+            border:1px solid black;
+            height:600px;
+            font-size:17px;
+            border:2px solid black;
+
+        }
+        .formrows{
+margin-left:300px;
+
+        }
+        .submitvalue{
+       
+            background-color:black;
+            color:white;/* Green */
+  border: none;
+ 
+  padding: 15px 32px;
+  text-align: center;
+  font-weight: bolder;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width:500px;
+  border:1px solid black;
+}
+        
+        h3{
+          text-align:center;
+          font-weight:bold;  
+          font-size:28px;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Registration Form</h3>
+    <div class="row">
+ 
+    <div class="formrows">
+    <form  onsubmit="return ValidationCheck()"></form>
+    <h4>(All <span  style="color:red;">*</span> field are mandatory)</h4>
+    <span  style="color:red;">*</span><label>Name:</label>
+        <input type="text" id="name" placeholder="Enter a Name" onblur="ValidationCheck()">
+        <span id="nameerror" style="color:red;"></span>
+        <br>
+        <br>
+        <span  style="color:red;">*</span><label>Email:</label>
+        <input type="email" id="email" placeholder="Enter a Email" onblur="ValidationCheck()">
+        <span id="emailerror" style="color:red;"></span>
+
+        <br>
+        <br>
+        <span  style="color:red;">*</span><label>Password:</label>
+        <input type="Password" id="password" placeholder="Enter a Password" onblur="ValidationCheck()">
+        <span id="passworderror" style="color:red;"></span>
+
+        <br>
+        <br>
+        <span  style="color:red;">*</span> <label>Confirm Password:</label>
+        <input type="Password" id="confirmpassword" placeholder="Enter a Confirm Password" onblur="ValidationCheck()">
+        <span id="confirmerror" style="color:red;"></span>
+
+        <br>
+        <br>
+        <span  style="color:red;">*</span><label>Gender:</label>
+    
+
+    <input   type="radio" value="male" name="Gender" onblur="ValidationCheck()">Male</input>
+    <input  type="radio" value="female" name="Gender" onblur="ValidationCheck()">Female</input>
+    <span id="gendererror" style="color:red;"></span>
+    <br>
+        <br>
+        <span  style="color:red;">*</span><label>Hobbies:</label>
+
+    <input   type="checkbox" name="Hobbie" value="Cricket" id="cricket" onblur="ValidationCheck()">Cricket</input>
+
+    <input  type="checkbox" name="Hobbie" value="TableTennis" id="TableTennis" onblur="ValidationCheck()">Table Tennis</input>
+    <input  type="checkbox" name="Hobbie" value="Football" id="Football" onblur="ValidationCheck()">Football</input>
+    <span id="Hobbieserror" style="color:red;"></span>
+
+    <br>
+        <br>
+        <span  style="color:red;">*</span><label>City:</label>
+       
+        
+        <select style="border:1px solid black;" id="City" name="city" onblur="ValidationCheck()">
+            <option value="">Select a City</option>
+
+            <option value="Mumbai">Mumbai</option>
+            <option value="pune">Pune</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Gujarat">Gujarat</option>
+        </select>
+        <span id="cityerror" style="color:red;"></span>
+    <br>
+    <br>
+        <span  style="color:red;">*</span><label for="Remarks">Remarks:</label>
+
+    
+    <textarea style="border:1px solid black;" id="remark" placeholder="Enter a Remarks" rows="5" cols="30" onblur="ValidationCheck()"></textarea>
+<span id="remarkerror" style="color:red;"></span>
+
+<br>
+<br>
+
+<button type="submit" class="submitvalue" value="submit" onclick="ValidationCheck()">Submit</button>
+    </form>
+    </div>
+    </div>
+  
+</body>
